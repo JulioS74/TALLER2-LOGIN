@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Animales</title>
+    <style>
+        /* Estilos para ajustar el tamaño de las imágenes */
+        #animal-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Espaciado entre imágenes */
+            justify-content: center; /* Centra las imágenes horizontalmente */
+        }
+
+        #animal-images div {
+            text-align: center; /* Centra el texto y las imágenes */
+            max-width: 200px; /* Ajusta el ancho máximo del contenedor de cada imagen */
+        }
+
+        #animal-images img {
+            max-width: 100%; /* Ajusta la imagen para que no se desborde del contenedor */
+            height: auto;    /* Mantiene la proporción de la imagen */
+            border: 1px solid #ddd; /* Añade un borde sutil alrededor de las imágenes */
+            border-radius: 8px; /* Redondea las esquinas de las imágenes */
+        }
+    </style>
+</head>
+<body>
+    <h1>Consulta de Animales</h1>
+    <p>Usa los siguientes enlaces para consultar los sonidos de los animales:</p>
+    <ul>
+        <li><a href="/api/sonidos/gato">¿Cómo hace el Gato?</a></li>
+        <li><a href="/api/sonidos/perro">¿Cómo hace el Perro?</a></li>
+        <li><a href="/api/sonidos/huron">¿Cómo hace el Huron?</a></li>
+        <li><a href="/api/sonidos/boa">¿Cómo hace la Boa Constrictor?</a></li>
+    </ul>
+
+    <h2>Imágenes de los Animales</h2>
+    <div id="animal-images">
+        <div>
+            <h3>Gato</h3>
+            <img src="{{ url_for('static', filename='images/gato.jpg') }}" alt="Imagen de Gato">
+        </div>
+        <div>
+            <h3>Perro</h3>
+            <img src="{{ url_for('static', filename='images/perro.jpg') }}" alt="Imagen de Perro">
+        </div>
+        <div>
+            <h3>Huron</h3>
+            <img src="{{ url_for('static', filename='images/huron.jpg') }}" alt="Imagen de Huron">
+        </div>
+        <div>
+            <h3>Boa Constrictor</h3>
+            <img src="{{ url_for('static', filename='images/boa.jpg') }}" alt="Imagen de Boa Constrictor">
+        </div>
+    </div>
+</body>
+</html>
